@@ -3,49 +3,30 @@ public abstract class Book implements BookInterface {
     protected String title;
     protected String author;
     protected String genre;
-    protected double cost;
+    protected double baseCost; // Base price of the book
 
     // Constructor
     public Book(String t, String a, String g, double c) {
         this.title = t;
         this.author = a;
         this.genre = g;
-        this.cost = c;
+        this.baseCost = c;
     }
 
-    // Abstract method
+    // Abstract method: MUST return the FINAL calculated cost (base + modifiers)
     public abstract double getCost();
 
-    // Getter methods
+    // New Getter for the raw base cost
+    public double getBaseCost() {
+        return baseCost;
+    }
+
+    // Getter methods (Remain)
     public String getTitle() {
         return title;
     }
+    // ... other getters ...
 
-    public String getAuthor() {
-        return author;
-    }
-
-    public String getGenre() {
-        return genre;
-    }
-
-    // BookInterface methods
-
-    @Override
-    public double getTotalCost() {
-        // For a single book instance, total cost is its calculated cost
-        return getCost();
-    }
-
-    @Override
-    public void getLast10Books() {
-        // Placeholder implementation for a single book
-        System.out.println("Method intended for a collection class.");
-    }
-
-    @Override
-    public int numBookPerGenre() {
-        // Placeholder implementation for a single book
-        return 1;
-    }
+    // BookInterface methods (Placeholders, as requested)
+    // ...
 }

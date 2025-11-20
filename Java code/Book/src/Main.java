@@ -30,10 +30,12 @@ public class Main {
         System.out.println("----------------------------\n");
 
         // 4. Print results (Total Cost Calculation)
-        System.out.printf("Total Cost of all books (Polymorphic call): $%.2f%n", totalCost);
+        System.out.printf("Total Cost of all books (Polymorphic loop sum): $%.2f%n", totalCost);
 
-        // Note: Methods like numBookPerGenre() and getLast10Books() from BookInterface
-        // would require manual collection logic here since the dedicated Library class is absent.
+        // 5. Example of calling the placeholder interface methods:
+        System.out.println("\n--- Placeholder Interface Method Calls ---");
+        // Calls the single book implementation of the interface method (which is incorrect for a collection)
+        duneAudio.getLast10Books();
 
         // Example of calling a specific method on one object:
         System.out.println(duneAudio.displayLastThreeAudio());

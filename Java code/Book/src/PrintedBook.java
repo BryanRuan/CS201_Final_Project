@@ -12,8 +12,8 @@ public class PrintedBook extends Book {
     // Implementation of abstract getCost()
     @Override
     public double getCost() {
-        // Example logic: Base cost + 0.02 per page
-        return this.cost + (0.02 * this.pages);
+        // Uses baseCost
+        return this.baseCost + (0.02 * this.pages);
     }
 
     // Getter + Setter

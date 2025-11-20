@@ -12,8 +12,8 @@ public class AudioBook extends Book {
     // Implementation of abstract getCost()
     @Override
     public double getCost() {
-        // Example logic: Base cost + 0.50 per hour of length
-        return this.cost + (0.50 * this.length);
+        // Uses baseCost
+        return this.baseCost + (0.50 * this.length);
     }
 
     // Getter + Setter
