@@ -18,9 +18,15 @@ public abstract class Book implements BookInterface {
 
     // --- Getter Methods ---
 
-    public String getTitle() { return title; }
-    public String getAuthor() { return author; }
-    public String getGenre() { return genre; }
+    public String getTitle() {
+        return title;
+    }
+    public String getAuthor() {
+        return author;
+    }
+    public String getGenre() {
+        return genre;
+    }
 
     /**
      * Abstract method for getting the cost.
