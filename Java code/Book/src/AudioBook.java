@@ -1,43 +1,52 @@
+
 public class AudioBook extends Book {
 
-    // Field
-    private double length; // length: double
+    private double length;
 
-    // Constructor
-    public AudioBook(String title, String author, String genre, double baseCost, double length) {
-        super(title, author, genre, baseCost);
-        this.length = length;
+    /**
+     * Default constructor for AudioBook.
+     */
+    public AudioBook() {
+        super("", "", "", 0.0);
+        this.length = 0.0;
     }
 
-    // Implementation of abstract getCost()
-    @Override
-    public double getCost() {
-        // Uses baseCost
-        return this.baseCost + (0.50 * this.length);
+    /**
+     * Parameterized constructor to fully initialize an AudioBook.
+     */
+    public AudioBook(String t, String a, String g, double c, double len) {
+        super(t, a, g, c);
+        this.length = len;
     }
 
-    // Getter + Setter
-    public void setLength(double length) {
-        this.length = length;
+    // --- Setter ---
+    public void setLength(double len) {
+        this.length = len;
     }
+
+    // --- Getters ---
 
     public double getLength() {
         return length;
     }
 
-    // Specific Methods
-    public double getAveLength() {
-        // Placeholder calculation
-        return length / 2.0;
+    public double getAvelength() {
+        return length;
+    }
+
+    @Override
+    public double getCost() {
+        return cost;
     }
 
     public String displayLastThreeAudio() {
-        return "Displaying last three audio books related to " + getTitle();
+        return "Displaying info for the last 3 audiobooks.";
     }
 
-    // Overrides Object's toString()
     @Override
     public String toString() {
-        return "AudioBook: " + title + " by " + author + ", Length: " + length + "h, Cost: $" + getCost();
+        return "AudioBook: " + getTitle() + " by " + getAuthor() +
+                " | Genre: " + getGenre() + " | Cost: $" + getCost() +
+                " | Length: " + length + " hours";
     }
 }
