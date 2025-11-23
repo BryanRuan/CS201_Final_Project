@@ -33,8 +33,6 @@ public abstract class Book implements BookInterface {
      */
     public abstract double getCost();
 
-    // --- Concrete Methods ---
-
     /**
      * Returns the total cost.
      */
