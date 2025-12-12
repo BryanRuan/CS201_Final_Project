@@ -47,7 +47,7 @@ public class Main {
         System.out.println("----------------------------\n");
 
         // 4. Print results (Total Cost Calculation)
-        System.out.printf("Total Cost of all books (Polymorphic call): $%.2f%n", totalCost);
+        System.out.printf("Total Cost of all books: $%.2f%n", totalCost);
 
         // 5. Save the updated collection back to the file
         saveBooksToCSV(CSV_FILE, bookCollection);
